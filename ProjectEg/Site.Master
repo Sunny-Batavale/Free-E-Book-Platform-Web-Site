@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProjectEg.Site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="HomeStyle.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        .myBtn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .myBtn:hover {
+            background-color: #0056b3;
+        }
+
+        .nav-container {
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .nav-path {
+            padding: 10px 0;
+        }
+
+        .nav-path a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        .nav-path span {
+            margin-right: 5px;
+        }
+
+        .nav-path a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-path .current-page {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .hero-image img {
+            max-width: 100px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5em;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-image">
+                    <img src="ebook_logo.png" alt="E-book Logo"/>
+                </div>
+                <div class="hero-content">
+                    <h1>Explore Your Favorite E-books</h1>
+                    <p>Discover a wide range of books in various categories and enjoy reading on the go.</p>
+                    <!-- Button to manage user's e-books -->
+                    <br/>
+                    <button type="button" onclick="window.location.href='ManageBookDetails.aspx'" runat="server" class="myBtn">See Your E-books</button>
+     <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="nav-path">
+         <CurrentNodeStyle Font-Bold="True" />
+     </asp:SiteMapPath>
+                </div>
+                 <!-- Sitemap / Navigation Path -->
+ <div class="nav-container">
+ </div>
+            </section>
+
+            <!-- Placeholder for dynamic content -->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>

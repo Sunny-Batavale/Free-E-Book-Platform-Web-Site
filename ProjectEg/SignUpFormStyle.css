@@ -1,0 +1,120 @@
+﻿/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #6a1b9a;
+}
+
+    .signup-container h1 {
+        margin-bottom: 15px;
+        font-size: 26px;
+        color: #6a1b9a;
+        font-weight: bold;
+    }
+
+    .signup-container p {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 16px;
+    }
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+    .input-field:focus {
+        border-color: #6a1b9a;
+        outline: none;
+    }
+
+/* Button */
+.btn-signup {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+    .btn-signup:hover {
+        background-color: #5a0d8b;
+    }
+
+/* Validation Summary */
+.validation-summary {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: none; /* Hide initially, only show if there are errors */
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px;
+    }
+
+        .signup-container h1 {
+            font-size: 22px;
+        }
+
+        .signup-container p {
+            font-size: 14px;
+        }
+
+    .btn-signup {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-field {
+        padding: 10px;
+    }
+}
